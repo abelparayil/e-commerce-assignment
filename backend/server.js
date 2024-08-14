@@ -4,6 +4,9 @@ import userRouter from './routes/user-routes.js';
 import productRouter from './routes/product-routes.js';
 import cartRouter from './routes/cart-routes.js';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
