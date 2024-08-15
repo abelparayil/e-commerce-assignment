@@ -18,15 +18,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.17.0' # Use your project's Node.js version
+          node-version: '18.17.0'
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./frontend # Adjust path if needed
+        working-directory: ./frontend
 
       - name: Run ESLint
         run: npm run lint
-        working-directory: ./frontend # Adjust path if needed
+        working-directory: ./frontend
 
   lint-backend:
     runs-on: ubuntu-latest
@@ -37,12 +37,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.17.0' # Use your project's Node.js version
+          node-version: '18.17.0'
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./backend # Adjust path if needed
+        working-directory: ./backend
 
       - name: Run ESLint
         run: npm run lint
-        working-directory: ./backend # Adjust path if needed
+        working-directory: ./backend
