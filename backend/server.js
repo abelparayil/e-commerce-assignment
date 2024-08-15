@@ -11,8 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:
-      'https://e-commerce-assignment-blwhx2i6s-abelparayils-projects.vercel.app',
+    origin: 'https://e-commerce.abelparayil.co',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
