@@ -1,5 +1,4 @@
 import express from 'express';
-import { PrismaClient } from '@prisma/client';
 import userRouter from './routes/user-routes.js';
 import productRouter from './routes/product-routes.js';
 import cartRouter from './routes/cart-routes.js';
@@ -17,7 +16,6 @@ app.use(
     credentials: true,
   })
 );
-const prismaClient = new PrismaClient();
 
 app.use(express.json());
 
@@ -27,6 +25,4 @@ app.use('/api/cart', cartRouter);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(PORT, () => {});

@@ -76,7 +76,7 @@ export const updateCartItemQuantity = async (req, res) => {
   } catch (error) {
     return res
       .status(500)
-      .json({ error: 'Failed to update cart item quantity' });
+      .json({ error: 'Failed to update cart item quantity', error });
   }
 };
 
@@ -94,7 +94,7 @@ export const removeCartItem = async (req, res) => {
     });
     return res.status(200).json({ message: 'Cart item removed' });
   } catch (error) {
-    return res.status(500).json({ error: 'Failed to remove cart item' });
+    return res.status(500).json({ error: 'Failed to remove cart item', error });
   }
 };
 
@@ -111,6 +111,6 @@ export const getUserCartItems = async (req, res) => {
 
     return res.status(200).json(cartItems);
   } catch (error) {
-    return res.status(500).json({ error: 'Failed to get cart items' });
+    return res.status(500).json({ error: 'Failed to get cart items', error });
   }
 };
